@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+
+  <node name="manual_path_planning" pkg="path_planning" type="manual_path_planning" />
+  <node name="$(anon rviz)" pkg="rviz" type="rviz" args="-d $(find path_planning)/config/pathplanning.rviz"/>
+</launch>

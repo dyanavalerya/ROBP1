@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+  <include file="$(find turtlebot_gazebo)/launch/turtlebot_world.launch" />
+  <include file="$(find turtlebot_gazebo)/launch/gmapping_demo.launch" />
+  <include file="$(find turtlebot_navigation)/launch/includes/move_base.launch.xml" />
+  <node name="manual_path_planning" pkg="path_planning" type="manual_path_planning" />
+  <node name="$(anon rviz)" pkg="rviz" type="rviz" args="-d $(find path_planning)/config/pathplanning.rviz"/>
+</launch>
